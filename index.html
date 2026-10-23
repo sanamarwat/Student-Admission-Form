@@ -1,70 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet"
-  href="style.sheet">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admission - Sana Mumtaz 3129005</title>
-<style>
-*{box-sizing:border-box; font-family:'Segoe UI', Arial, sans-serif;}
-body{margin:0; background:#dbe9df;}
-.top-bar{background:#0b5c36; height:80px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold;}
-.container{background:white; margin:-25px auto 25px auto; max-width:700px; border-radius:22px; padding:22px;}
-.small-head{color:#0b5c36; letter-spacing:3px; font-size:13px; font-weight:bold; margin:0;}
-h1{margin:6px 0 4px 0; font-size:28px;}
-.student-info{background:#eef6ef; border:1px dashed #0b5c36; border-radius:12px; padding:10px 14px; margin:12px 0; font-size:14px;}
-fieldset{border:1.5px solid #e5e5e5; border-radius:18px; padding:18px; margin:26px 0;}
-legend{color:#0b4d2e; font-weight:800; font-size:18px; padding:0 10px;}
-label{font-weight:700; display:block; margin:18px 0 8px 0; font-size:14px;}
-input[type="text"], input[type="email"], input[type="number"], input[type="url"], input[type="date"], select, textarea{width:100%; padding:14px; border:1.5px solid #d5d5d5; border-radius:12px; font-size:15px;}
-.radio-box, .check-box{border:1.5px solid #d5d5d5; border-radius:12px; padding:14px; margin:10px 0; display:flex; align-items:center; gap:12px; background:#fcfcfc;}
-.radio-box input[type="radio"]{width:20px !important; height:20px !important; flex:0 0 20px !important; margin:0 !important; accent-color:#0b5c36;}
-.check-box input[type="checkbox"]{width:20px !important; height:20px !important; flex:0 0 20px !important; margin:0 !important; accent-color:#0b5c36;}
-.radio-box div b, .check-box div b{font-size:15px; color:#111;}
-.radio-box div small, .check-box div small{color:#666; font-size:13px;}
-textarea{height:110px;}
-.btn-green{width:100%; background:#0b5c36; color:white; border:none; padding:16px; border-radius:12px; font-size:18px; font-weight:bold; margin-top:22px; cursor:pointer;}
-.btn-reset{width:100%; background:#f2f2f2; border:1px solid #ddd; padding:14px; border-radius:12px; margin-top:12px;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Admission Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="top-bar">STUDENT ADMISSION FORM</div>
-<div class="container">
-<p class="small-head">ADMISSION APPLICATION</p>
-<h1>Application Details</h1>
-<div class="student-info">Submitted by: <b>Sana Mumtaz</b> | Roll No: <b>3129005</b></div>
-<p><span style="color:red">*</span> Required field</p>
-<form>
-<fieldset><legend>01. Personal Information</legend>
-<label>Full Name *</label><input type="text" value="Sana Mumtaz">
-<label>Email Address *</label><input type="email" placeholder="name@example.com">
-<label>Phone Number</label><input type="text" placeholder="03XXXXXXXXX">
-<label>Age *</label><input type="number" placeholder="Enter your age">
-<label>City *</label><select><option>Rawalpindi</option><option>Islamabad</option><option>Lahore</option></select>
-</fieldset>
-<fieldset><legend>02. Course Selection</legend>
-<label>Choose a Course *</label><select><option>Web Development</option><option>Graphic Designing</option></select>
-<label>Portfolio Website</label><input type="url" placeholder="https://">
-<label>Preferred Date</label><input type="date">
-</fieldset>
-<fieldset><legend>03. Preferred Class Shift</legend>
-<div class="radio-box"><input type="radio" name="shift" checked><div><b>Morning</b><br><small>Start your day with learning</small></div></div>
-<div class="radio-box"><input type="radio" name="shift"><div><b>Evening</b><br><small>Learn after daytime tasks</small></div></div>
-<div class="radio-box"><input type="radio" name="shift"><div><b>Weekend</b><br><small>Make time on the weekend</small></div></div>
-</fieldset>
-<fieldset><legend>04. Existing Skills</legend>
-<div class="check-box"><input type="checkbox"><div><b>HTML</b></div></div>
-<div class="check-box"><input type="checkbox"><div><b>CSS</b></div></div>
-<div class="check-box"><input type="checkbox"><div><b>JavaScript</b></div></div>
-<div class="check-box"><input type="checkbox"><div><b>Python</b></div></div>
-</fieldset>
-<fieldset><legend>05. Motivation</legend>
-<label>Why do you want to join? *</label><textarea placeholder="Tell us..."></textarea>
-</fieldset>
-<button class="btn-green">Submit Application →</button>
-<button type="button" class="btn-reset">Reset Form</button>
-</form>
-</div>
+
+    <header class="site-header">
+        <p class="eyebrow">STUDENT PORTAL</p>
+        <h1>Student Admission Form</h1>
+        <p class="intro">
+            Complete the form below to apply.
+        </p>
+    </header>
+
+    <main class="page-main">
+        <div class="form-card">
+
+            <div class="form-heading">
+                <div>
+                    <p class="eyebrow">ADMISSION APPLICATION</p>
+                    <h2>Application Details</h2>
+                </div>
+                <p class="required-note">
+                    <span>*</span> Required field
+                </p>
+            </div>
+
+            <form action="#" method="get">
+
+                <fieldset class="form-section">
+                    <legend>01. Personal Information</legend>
+
+                    <div class="field-grid">
+
+                        <div class="form-group">
+                            <label for="fullname">
+                                Full Name <span class="required-mark">*</span>
+                            </label>
+                            <input class="form-control" type="text"
+                                   id="fullname" name="fullname"
+                                   placeholder="Enter your full name"
+                                   minlength="3" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                Email Address <span class="required-mark">*</span>
+                            </label>
+                            <input class="form-control" type="email"
+                                   id="email" name="email"
+                                   placeholder="name@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input class="form-control" type="tel"
+                                   id="phone" name="phone"
+                                   placeholder="03XXXXXXXXX"
+                                   pattern="03[0-9]{9}"
+                                   title="Enter an 11-digit Pakistani mobile number starting with 03">
+                            <small class="field-hint">
+                                Optional: 11 digits, starting with 03.
+                            </small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="age">
+                                Age <span class="required-mark">*</span>
+                            </label>
+                            <input class="form-control" type="number"
+                                   id="age" name="age"
+                                   placeholder="Enter your age"
+                                   min="16" max="60" required>
+                        </div>
+
+                        <div class="form-group field-full">
+                            <label for="city">
+                                City <span class="required-mark">*</span>
+                            </label>
+                            <select class="form-control" id="city"
+                                    name="city" required>
+                                <option value="">Select your city</option>
+                                <option value="Islamabad">Islamabad</option>
+                                <option value="Lahore">Lahore</option>
+                                <option value="Karachi">Karachi</option>
+                                <option value="Peshawar">Peshawar</option>
+                                <option value="Quetta">Quetta</option>
+                                <option value="Abbottabad">Abbottabad</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-section">
+                    <legend>02. Course Selection</legend>
+
+                    <div class="form-group">
+                        <label for="course">
+                            Choose a Course <span class="required-mark">*</span>
+                        </label>
+                        <select class="form-control" id="course"
+                                name="course" required>
+                            <option value="">Select a course</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Graphic Design">Graphic Design</option>
+                            <option value="Digital Marketing">Digital Marketing</option>
+                            <option value="Artificial Intelligence">
+                                Artificial Intelligence
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="field-grid extra-fields">
+                        <div class="form-group">
+                            <label for="portfolio">
+                                Portfolio Website
+                                <span class="optional-label">(Optional)</span>
+                            </label>
+                            <input class="form-control" type="url"
+                                   id="portfolio" name="portfolio"
+                                   placeholder="https://your-portfolio.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="start-date">
+                                Preferred Starting Date
+                                <span class="optional-label">(Optional)</span>
+                            </label>
+                            <input class="form-control" type="date"
+                                   id="start-date" name="start-date">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-section">
+                    <legend>03. Preferred Class Shift</legend>
+
+                    <p class="section-description">
+                        Choose one shift that works best for you.
+                        <span class="required-mark">*</span>
+                    </p>
+
+                    <div class="choice-grid">
+
+                        <div class="choice-card">
+                            <input type="radio" id="morning"
+                                   name="shift" value="Morning" required>
+                            <label for="morning">
+                                <span class="choice-title">Morning</span>
+                                <span class="choice-detail">
+                                    Start your day with learning
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="choice-card">
+                            <input type="radio" id="evening"
+                                   name="shift" value="Evening">
+                            <label for="evening">
+                                <span class="choice-title">Evening</span>
+                                <span class="choice-detail">
+                                    Learn after daytime tasks
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="choice-card">
+                            <input type="radio" id="weekend"
+                                   name="shift" value="Weekend">
+                            <label for="weekend">
+                                <span class="choice-title">Weekend</span>
+                                <span class="choice-detail">
+                                    Make time on the weekend
+                                </span>
+                            </label>
+                        </div>
+
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-section">
+                    <legend>
+                        04. Existing Skills
+                        <span class="optional-label">(Optional)</span>
+                    </legend>
+
+                    <p class="section-description">
+                        Select any skills you already have.
+                        You can choose more than one.
+                    </p>
+
+                    <div class="skills-grid">
+
+                        <label class="skill-option" for="skill-html">
+                            <input type="checkbox" id="skill-html"
+                                   name="skills" value="HTML">
+                            <span>HTML</span>
+                        </label>
+
+                        <label class="skill-option" for="skill-css">
+                            <input type="checkbox" id="skill-css"
+                                   name="skills" value="CSS">
+                            <span>CSS</span>
+                        </label>
+
+                        <label class="skill-option" for="skill-javascript">
+                            <input type="checkbox" id="skill-javascript"
+                                   name="skills" value="JavaScript">
+                            <span>JavaScript</span>
+                        </label>
+
+                        <label class="skill-option" for="skill-python">
+                            <input type="checkbox" id="skill-python"
+                                   name="skills" value="Python">
+                            <span>Python</span>
+                        </label>
+
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-section">
+                    <legend>05. Motivation</legend>
+
+                    <div class="form-group">
+                        <label for="motivation">
+                            Why do you want to join this course?
+                            <span class="required-mark">*</span>
+                        </label>
+
+                        <textarea class="form-control"
+                                  id="motivation" name="motivation"
+                                  rows="5"
+                                  placeholder="Tell us what you hope to learn (10–200 characters)..."
+                                  minlength="10" maxlength="200"
+                                  required></textarea>
+
+                        <small class="field-hint">
+                            Write between 10 and 200 characters.
+                        </small>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button class="submit-button" id="submit-button"
+                            type="submit">
+                        Submit Application <span aria-hidden="true">→</span>
+                    </button>
+
+                    <button class="reset-button" type="reset">
+                        Reset Form
+                    </button>
+                </div>
+
+                <p class="privacy-note">
+                    Demo form for coursework. Do not enter real personal information.
+                </p>
+
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            Designed by <strong>Sana Mumtaz</strong>
+            <span class="footer-divider">|</span>
+            Roll No. <strong>3129005</strong>
+        </p>
+        <p>Web Development Advanced — Assignment 05</p>
+    </footer>
+
 </body>
 </html>

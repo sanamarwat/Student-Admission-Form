@@ -1,191 +1,412 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #eaf2ff;
-    margin: 0;
-    padding: 20px;
-    color: #222;
-}
+/* Assignment 05: CSS Design Challenge
+   Theme: Green, because the roll number ends in 5.
+*/
 
-h1 {
-    text-align: center;
-    color: #2459a9;
-}
-
-p {
-    text-align: center;
-}
-
-form {
-    max-width: 600px;
-    margin: 25px auto;
-    padding: 25px;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px #00000020;
-}
-
-label {
-    display: block;
-    margin-top: 12px;
-    font-weight: bold;
-}
-
-input, select, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 6px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    box-sizing: border-box;
-}
-
-button {
-    margin-top: 18px;
-    padding: 12px 18px;
-    background-color: #2459a9;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #173d78;
-}
-
-@media (max-width: 600px) {
-    form {
-        padding: 15px;
-    }
-}/* Premium Student Admission Form */
-
+/* Element selector 1 */
 * {
     box-sizing: border-box;
 }
 
+/* Element selector 2 */
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #071a35, #123b65, #071a35);
     margin: 0;
-    padding: 40px 20px;
-    color: #243247;
-    min-height: 100vh;
-}
-
-/* Main Heading */
-h1 {
-    text-align: center;
-    color: #f4c75b;
-    font-size: 34px;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-}
-
-p {
-    text-align: center;
-    color: #ffffff;
+    color: #20352d;
+    background: #edf5ef;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    margin-bottom: 28px;
+    line-height: 1.6;
 }
 
-/* Form Card */
-form {
-    max-width: 650px;
+/* Element selector 3 */
+h1,
+h2 {
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+.site-header {
+    padding: 42px 20px 76px;
+    color: #ffffff;
+    text-align: center;
+    background: linear-gradient(135deg, #145c3b, #238457);
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    color: #c9f0d8;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+.site-header h1 {
+    margin-bottom: 12px;
+    font-size: clamp(1.8rem, 4vw, 2.65rem);
+    letter-spacing: -0.035em;
+}
+
+.intro {
+    max-width: 590px;
     margin: 0 auto;
-    padding: 35px;
+    color: #e5f5eb;
+    font-size: 1rem;
+}
+
+.page-main {
+    width: min(100% - 32px, 850px);
+    margin: -46px auto 42px;
+}
+
+/* Class selector 1: main form container */
+.form-card {
+    padding: 34px;
     background: #ffffff;
-    border: 2px solid #d5ad4a;
-    border-radius: 18px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+    border: 1px solid #d6e7da;
+    border-radius: 20px;
+    box-shadow: 0 18px 45px rgba(25, 78, 51, 0.12);
 }
 
-/* Labels */
-label {
-    display: block;
-    margin-top: 16px;
-    margin-bottom: 7px;
-    font-weight: bold;
-    color: #12345a;
-    font-size: 15px;
+.form-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 28px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e4eee6;
 }
 
-/* Input Fields */
-input,
-select,
-textarea {
+.form-heading .eyebrow {
+    color: #238457;
+}
+
+.form-heading h2 {
+    margin-bottom: 0;
+    color: #173f2c;
+    font-size: 1.55rem;
+}
+
+.required-note {
+    flex-shrink: 0;
+    color: #64756a;
+    font-size: 0.82rem;
+}
+
+.required-mark,
+.required-note span {
+    color: #bd3d36;
+    font-weight: 700;
+}
+
+.optional-label {
+    color: #708176;
+    font-size: 0.82rem;
+    font-weight: 400;
+}
+
+/* Class selector 2: separate form sections */
+.form-section {
+    min-width: 0;
+    margin: 0 0 22px;
+    padding: 22px;
+    border: 1px solid #dce9df;
+    border-radius: 13px;
+    background: #fcfefc;
+}
+
+.form-section legend {
+    max-width: 100%;
+    padding: 0 8px;
+    color: #1c5638;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.section-description {
+    margin: 0 0 16px;
+    color: #617267;
+    font-size: 0.9rem;
+}
+
+.field-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 19px;
+}
+
+.extra-fields {
+    margin-top: 19px;
+}
+
+.form-group {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.field-full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: #2d4938;
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
+.form-control {
     display: block;
     width: 100%;
-    padding: 12px 14px;
-    margin: 0;
-    border: 1px solid #cbd5e1;
+    min-width: 0;
+    min-height: 46px;
+    padding: 11px 13px;
+    color: #20352d;
+    background: #ffffff;
+    border: 1px solid #cbdacf;
     border-radius: 8px;
-    background-color: #f8fafc;
-    color: #243247;
-    font-size: 15px;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    font: inherit;
+    font-size: 0.94rem;
 }
 
-/* Focus Effect */
-input:focus,
-select:focus,
-textarea:focus {
-    outline: none;
-    border-color: #c49a2e;
-    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
-    background-color: #ffffff;
+.form-control::placeholder {
+    color: #89978d;
+    opacity: 1;
 }
 
-/* Buttons */
-button {
-    padding: 13px 20px;
-    margin-top: 22px;
-    margin-right: 8px;
-    border: 2px solid #d5ad4a;
-    border-radius: 8px;
-    background: linear-gradient(135deg, #f4d477, #c49a2e);
-    color: #102846;
-    font-size: 15px;
-    font-weight: bold;
+/* Unique improvement 1:
+   A visible focus ring helps keyboard users identify the active field.
+   outline and outline-offset show focus without changing the layout. */
+.form-control:focus,
+.choice-card input:focus-visible,
+.skill-option input:focus-visible,
+button:focus-visible {
+    outline: 3px solid #f0b84b;
+    outline-offset: 3px;
+}
+
+.form-control:focus {
+    border-color: #23784d;
+    background: #fbfffc;
+}
+
+.field-hint {
+    color: #687b6e;
+    font-size: 0.79rem;
+}
+
+.choice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.choice-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    min-width: 0;
+    padding: 14px 12px;
+    border: 1px solid #d7e5da;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.choice-card input {
+    margin-top: 5px;
+    accent-color: #23784d;
+}
+
+.choice-card label {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-/* Button Hover */
-button:hover {
-    background: #12345a;
+.choice-title {
+    color: #254b34;
+    font-weight: 700;
+}
+
+.choice-detail {
+    color: #708075;
+    font-size: 0.76rem;
+    line-height: 1.4;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.skill-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #d7e5da;
+    border-radius: 9px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.skill-option input {
+    accent-color: #23784d;
+}
+
+.skill-option span {
+    overflow-wrap: anywhere;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* ID selector 1: submit button */
+#submit-button {
     color: #ffffff;
-    border-color: #d5ad4a;
+    background: #23784d;
+    border: 1px solid #23784d;
+}
+
+/* Unique improvement 2:
+   The submit button lifts slightly on hover.
+   transform, box-shadow and transition create a clear interactive effect. */
+#submit-button:hover {
+    background: #175c39;
+    box-shadow: 0 7px 16px rgba(35, 120, 77, 0.22);
     transform: translateY(-2px);
 }
 
-/* Mobile Responsive Design */
-@media (max-width: 600px) {
-    body {
-        padding: 25px 12px;
-    }
-
-    h1 {
-        font-size: 26px;
-    }
-
-    form {
-        padding: 20px 16px;
-    }
-
-    button {
-        width: 100%;
-        margin-right: 0;
-    }
-}.student-footer {
-    text-align: center;
-    margin-top: 30px;
-    padding: 15px;
-    color: #f4c75b;
-    font-size: 16px;
-    border-top: 2px solid #d5ad4a;
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 6px;
 }
 
-.student-footer p {
-    color: #f4c75b;
-    margin: 8px;
+button {
+    min-height: 46px;
+    padding: 11px 19px;
+    border-radius: 9px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 160ms ease,
+                box-shadow 160ms ease,
+                transform 160ms ease;
+}
+
+#submit-button span {
+    margin-left: 8px;
+    font-size: 1.15rem;
+}
+
+.reset-button {
+    color: #31533e;
+    background: #f1f7f2;
+    border: 1px solid #cbdacf;
+}
+
+.reset-button:hover {
+    background: #e2efe5;
+}
+
+.privacy-note {
+    margin: 16px 0 0;
+    color: #718075;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.site-footer {
+    padding: 0 18px 28px;
+    color: #64766a;
+    font-size: 0.84rem;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 4px 0;
+}
+
+.site-footer strong {
+    color: #31533e;
+}
+
+.footer-divider {
+    padding: 0 5px;
+    color: #91a99a;
+}
+
+/* ID selector 2: a separate rule for the footer divider */
+#footer-divider {
+    color: #91a99a;
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 600px) {
+    .site-header {
+        padding: 32px 18px 66px;
+    }
+
+    .page-main {
+        width: calc(100% - 24px);
+        margin-top: -38px;
+        margin-bottom: 28px;
+    }
+
+    .form-card {
+        padding: 20px 14px;
+        border-radius: 15px;
+    }
+
+    .form-heading {
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .form-heading h2 {
+        font-size: 1.35rem;
+    }
+
+    .form-section {
+        padding: 17px 13px;
+        margin-bottom: 17px;
+    }
+
+    .field-grid,
+    .choice-grid,
+    .skills-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .choice-card {
+        padding: 12px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions button {
+        width: 100%;
+    }
+
+    .required-note {
+        font-size: 0.8rem;
+    }
+}
+
+/* Respect the user's reduced-motion accessibility preference. */
+@media (prefers-reduced-motion: reduce) {
+    button {
+        transition: none;
+    }
+
+    #submit-button:hover {
+        transform: none;
+    }
 }
