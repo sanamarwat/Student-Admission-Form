@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet"
+  href="style.sheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Admission - Sana Mumtaz 3129005</title>
 <style>
-  *{box-sizing:border-box; font-family:Arial,sans-serif;}
-  body{margin:0; background:#dbe9df;}
-  .top-bar{background:#0b5c36; height:80px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold;}
-  .container{background:white; margin:-25px 12px 25px; border-radius:22px; padding:22px; box-shadow:0 6px 24px rgba(0,0,0,0.12);}
-  .small-head{color:#0b5c36; letter-spacing:3px; font-size:13px; font-weight:bold;}
-  h1{font-size:30px; margin:6px 0;}
-  .student-info{background:#eef6ef; border:1px dashed #0b5c36; border-radius:12px; padding:10px 14px; margin:12px 0; font-size:14px;}
-  fieldset{border:1.5px solid #e5e5e5; border-radius:18px; padding:18px; margin:26px 0;}
-  legend{color:#0b4d2e; font-weight:800; font-size:18px; padding:0 10px;}
-  label{font-weight:700; display:block; margin:18px 0 8px; font-size:14.5px;}
-  input,select,textarea{width:100%; padding:14px; border:1.5px solid #d5d5d5; border-radius:12px;}
-  .radio-box,.check-box{border:1.5px solid #d5d5d5; border-radius:12px; padding:14px; margin:10px 0; display:flex; gap:12px;}
-  .btn-green{width:100%; background:#0b5c36; color:white; border:none; padding:16px; border-radius:12px; font-size:18px; font-weight:bold; margin-top:22px;}
-  .btn-reset{width:100%; background:#f2f2f2; border:1px solid #ddd; padding:14px; border-radius:12px; margin-top:12px;}
+*{box-sizing:border-box; font-family:'Segoe UI', Arial, sans-serif;}
+body{margin:0; background:#dbe9df;}
+.top-bar{background:#0b5c36; height:80px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold;}
+.container{background:white; margin:-25px auto 25px auto; max-width:700px; border-radius:22px; padding:22px;}
+.small-head{color:#0b5c36; letter-spacing:3px; font-size:13px; font-weight:bold; margin:0;}
+h1{margin:6px 0 4px 0; font-size:28px;}
+.student-info{background:#eef6ef; border:1px dashed #0b5c36; border-radius:12px; padding:10px 14px; margin:12px 0; font-size:14px;}
+fieldset{border:1.5px solid #e5e5e5; border-radius:18px; padding:18px; margin:26px 0;}
+legend{color:#0b4d2e; font-weight:800; font-size:18px; padding:0 10px;}
+label{font-weight:700; display:block; margin:18px 0 8px 0; font-size:14px;}
+input[type="text"], input[type="email"], input[type="number"], input[type="url"], input[type="date"], select, textarea{width:100%; padding:14px; border:1.5px solid #d5d5d5; border-radius:12px; font-size:15px;}
+.radio-box, .check-box{border:1.5px solid #d5d5d5; border-radius:12px; padding:14px; margin:10px 0; display:flex; align-items:center; gap:12px; background:#fcfcfc;}
+.radio-box input[type="radio"]{width:20px !important; height:20px !important; flex:0 0 20px !important; margin:0 !important; accent-color:#0b5c36;}
+.check-box input[type="checkbox"]{width:20px !important; height:20px !important; flex:0 0 20px !important; margin:0 !important; accent-color:#0b5c36;}
+.radio-box div b, .check-box div b{font-size:15px; color:#111;}
+.radio-box div small, .check-box div small{color:#666; font-size:13px;}
+textarea{height:110px;}
+.btn-green{width:100%; background:#0b5c36; color:white; border:none; padding:16px; border-radius:12px; font-size:18px; font-weight:bold; margin-top:22px; cursor:pointer;}
+.btn-reset{width:100%; background:#f2f2f2; border:1px solid #ddd; padding:14px; border-radius:12px; margin-top:12px;}
 </style>
 </head>
 <body>
 <div class="top-bar">STUDENT ADMISSION FORM</div>
 <div class="container">
-  <p class="small-head">ADMISSION APPLICATION</p>
-  <h1>Application Details</h1>
-  <div class="student-info">Submitted by: <b>Sana Mumtaz</b> | Roll No: <b>3129005</b></div>
-  <p><span style="color:#d00">*</span> Required field</p>
-  <form>
-    <fieldset><legend>01. Personal Information</legend>
-      <label>Full Name *</label><input type="text" value="Sana Mumtaz" required>
-      <label>Email Address *</label><input type="email" placeholder="name@example.com" required>
-      <label>Phone Number</label><input type="text" placeholder="03XXXXXXXXX">
-      <label>Age *</label><input type="number" placeholder="Enter your age" required>
-      <label>City *</label><select><option>Rawalpindi</option><option>Islamabad</option><option>Lahore</option></select>
-    </fieldset>
-    <fieldset><legend>02. Course Selection</legend>
-      <label>Choose a Course *</label><select><option>Web Development</option><option>Graphic Designing</option></select>
-      <label>Portfolio Website (Optional)</label><input type="url" placeholder="https://your-portfolio.com">
-      <label>Preferred Starting Date</label><input type="date">
-    </fieldset>
-    <fieldset><legend>03. Preferred Class Shift</legend>
-      <div class="radio-box"><input type="radio" name="shift" checked><div><b>Morning</b><br><small>Start your day with learning</small></div></div>
-      <div class="radio-box"><input type="radio" name="shift"><div><b>Evening</b><br><small>Learn after daytime tasks</small></div></div>
-      <div class="radio-box"><input type="radio" name="shift"><div><b>Weekend</b><br><small>Make time on the weekend</small></div></div>
-    </fieldset>
-    <fieldset><legend>04. Existing Skills (Optional)</legend>
-      <div class="check-box"><input type="checkbox"><b>HTML</b></div>
-      <div class="check-box"><input type="checkbox"><b>CSS</b></div>
-      <div class="check-box"><input type="checkbox"><b>JavaScript</b></div>
-      <div class="check-box"><input type="checkbox"><b>Python</b></div>
-    </fieldset>
-    <fieldset><legend>05. Motivation</legend>
-      <label>Why do you want to join this course? *</label><textarea placeholder="Tell us what you hope to learn..."></textarea>
-    </fieldset>
-    <button type="submit" class="btn-green">Submit Application →</button>
-    <button type="reset" class="btn-reset">Reset Form</button>
-  </form>
+<p class="small-head">ADMISSION APPLICATION</p>
+<h1>Application Details</h1>
+<div class="student-info">Submitted by: <b>Sana Mumtaz</b> | Roll No: <b>3129005</b></div>
+<p><span style="color:red">*</span> Required field</p>
+<form>
+<fieldset><legend>01. Personal Information</legend>
+<label>Full Name *</label><input type="text" value="Sana Mumtaz">
+<label>Email Address *</label><input type="email" placeholder="name@example.com">
+<label>Phone Number</label><input type="text" placeholder="03XXXXXXXXX">
+<label>Age *</label><input type="number" placeholder="Enter your age">
+<label>City *</label><select><option>Rawalpindi</option><option>Islamabad</option><option>Lahore</option></select>
+</fieldset>
+<fieldset><legend>02. Course Selection</legend>
+<label>Choose a Course *</label><select><option>Web Development</option><option>Graphic Designing</option></select>
+<label>Portfolio Website</label><input type="url" placeholder="https://">
+<label>Preferred Date</label><input type="date">
+</fieldset>
+<fieldset><legend>03. Preferred Class Shift</legend>
+<div class="radio-box"><input type="radio" name="shift" checked><div><b>Morning</b><br><small>Start your day with learning</small></div></div>
+<div class="radio-box"><input type="radio" name="shift"><div><b>Evening</b><br><small>Learn after daytime tasks</small></div></div>
+<div class="radio-box"><input type="radio" name="shift"><div><b>Weekend</b><br><small>Make time on the weekend</small></div></div>
+</fieldset>
+<fieldset><legend>04. Existing Skills</legend>
+<div class="check-box"><input type="checkbox"><div><b>HTML</b></div></div>
+<div class="check-box"><input type="checkbox"><div><b>CSS</b></div></div>
+<div class="check-box"><input type="checkbox"><div><b>JavaScript</b></div></div>
+<div class="check-box"><input type="checkbox"><div><b>Python</b></div></div>
+</fieldset>
+<fieldset><legend>05. Motivation</legend>
+<label>Why do you want to join? *</label><textarea placeholder="Tell us..."></textarea>
+</fieldset>
+<button class="btn-green">Submit Application →</button>
+<button type="button" class="btn-reset">Reset Form</button>
+</form>
 </div>
 </body>
 </html>
